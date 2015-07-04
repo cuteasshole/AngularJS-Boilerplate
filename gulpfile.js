@@ -119,7 +119,7 @@ gulp.task('concat', function() {
 // SASS task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function() {
-  return gulp.src('styles/style.scss')
+  return gulp.src('assets/styles/style.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       style: 'expanded'
@@ -129,7 +129,7 @@ gulp.task('sass', function() {
       message: 'Error(s) occurred during compile!'
     }))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('styles'))
+    .pipe(gulp.dest('assets/styles'))
     .pipe(reload({
       stream: true
     }))
@@ -142,7 +142,7 @@ gulp.task('sass', function() {
 gulp.task('sass:build', function() {
   var s = $.size();
 
-  return gulp.src('styles/style.scss')
+  return gulp.src('assets/styles/style.scss')
     .pipe($.sass({
       style: 'compact'
     }))
@@ -241,7 +241,7 @@ gulp.task('default', ['browser-sync', 'sass', 'minify-css'], function() {
   });
   gulp.watch(['*.html', 'views/*.html'], ['bs-reload']);
   gulp.watch(['app/*.js', 'components/**/*.js', 'js/*.js'], ['bs-reload']);
-  gulp.watch('styles/**/*.scss', ['sass', 'minify-css']);
+  gulp.watch('assets/styles/**/*.scss', ['sass', 'minify-css']);
 });
 
 

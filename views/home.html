@@ -1,6 +1,7 @@
 <h2 class="text-center">AngularJS Boilerplate</h2>
 
 <!-- slider directive -->
+<!--
 <div myslider>
     <ul class="slider">
         <li class="image-slider">
@@ -20,7 +21,11 @@
         </li>
     </ul>
 </div>
-
+-->
+<div ng-controller="Controller">
+  Date format: <input ng-model="format"> <hr/>
+  Current time is: <span my-current-time="format"></span>
+</div>
 <h3>Features</h3>
 <div class="container cf">
     <div>
@@ -40,8 +45,3 @@
         </ul>
     </div>
 </div>
-
-<div class="text-center">
-    <small>Images courtesy of <a target="_blank" href="http://unsplash.com">unsplash.com</a></small>
-</div>
-

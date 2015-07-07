@@ -31,6 +31,9 @@ git clone https://github.com/jbutko/AngularJS-Boilerplate.git
 ```bash
 npm install
 ```
+```
+bower install
+```
 - install all npm and bower dependencies
 
 **Note:** If `npm install` fails during dependency installation it will be likely caused by `gulp-imagemin`. In that case remove `gulp-imagemin` dependency from `package.json`, run `npm install` again and then install `gulp-imagemin` separately with following command: `npm install gulp-imagemin --save-dev`

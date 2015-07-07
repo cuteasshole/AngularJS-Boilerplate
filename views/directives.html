@@ -1,9 +1,25 @@
+
+
 <h1>Naked Directives</h1>
 
 <div class="container cf">
   <div>
-    <h2>Alert</h2>
+    <h2>Click</h2>  
+    <div>
+        <button ng-click="count = count + 1" ng-init="count=0">
+            Increment
+        </button>
+        <span>
+            count: {{count}}
+        </span>
+    </div>
+    <h2>Clock</h2>
+    <div ng-controller="clockController">
+      Date format: <input ng-model="format"> <hr/>
+      Current time is: <span my-current-time="format"></span>
+    </div>
+      <h2>Collapse</h2>
+      <div ></div>
   </div>
 </div>
 
-<test></test>

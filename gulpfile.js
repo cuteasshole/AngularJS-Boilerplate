@@ -239,6 +239,8 @@ gulp.task('default', ['browser-sync', 'sass', 'minify-css'], function() {
       reload(file.path);
     }
   });
+  gulp.watch(['*.html', '/'], ['bs-reload']);
+  gulp.watch(['*.js', '/'], ['bs-reload']);
   gulp.watch(['*.html', 'views/*.html'], ['bs-reload']);
   gulp.watch(['app/*.js', 'components/**/*.js', 'js/*.js'], ['bs-reload']);
   gulp.watch('assets/styles/**/*.scss', ['sass', 'minify-css']);
